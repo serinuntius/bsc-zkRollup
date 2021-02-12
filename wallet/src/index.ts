@@ -43,7 +43,7 @@ const setupSiningKey = async () => {
         // User doesn't have (but can) to specify the fee amount. If omitted, library will query zkSync node for
         // the lowest possible amount.
 
-        const changePubkey = await syncWallet.setSigningKey({ feeToken: 'ETH' });
+        const changePubkey = await syncWallet.setSigningKey({ feeToken: 'BNB' });
 
         // Wait until the tx is committed
         await changePubkey.awaitReceipt();
@@ -63,9 +63,9 @@ const getGasPrice = async () => {
 }
 
 (async () => {
-    await getTokens();
+    // await getTokens();
 
-    // await setupSiningKey();
+    await setupSiningKey();
     // await getGasPrice();
 
 })();
